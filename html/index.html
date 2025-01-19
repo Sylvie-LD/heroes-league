@@ -1,0 +1,410 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="../css/reset.css" />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="shortcut icon" href="data:image" type="image/x-icon" />
+    <title>Heros league</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://api.fontshare.com/v2/css?f[]=satoshi@400&display=swap"
+      rel="stylesheet"
+    />
+
+    <script defer src="../js/app.js" type="module"></script>
+  </head>
+
+  <body>
+    <header class="container header-hero">
+      <div class="header-hero__container">
+        <button id="menu-toggler" class="header-hero__button" href="">
+          Menu
+        </button>
+        <a class="header-hero__link" href="">Heros League</a>
+
+        <!-- Ajout du rôle navigation pour l'accessibilité -->
+        <nav class="header-hero__menu" role="navigation">
+          <a class="header-hero__menu-item" href="#services">Services</a>
+          <a class="header-hero__menu-item" href="#heros">Nos héros</a>
+          <a class="header-hero__menu-item" href="#temoignages">Témoignages</a>
+          <a class="header-hero__menu-item" href="#sauvezMoi-form"
+            >Sauvez-moi !</a
+          >
+        </nav>
+      </div>
+
+      <div class="container header-hero__container-header">
+        <h1 class="header-hero__title">Heros League</h1>
+        <p class="header-hero__description">
+          Des gens un peu spéciaux, pour des problèmes pas tout à fait normaux
+        </p>
+      </div>
+    </header>
+
+    <!-- section services -->
+    <main class="hero-zone">
+      <section class="container hero-zone__services">
+        <h2 class="hero-zone__services-title" id="services">
+          Nos
+          <span class="hero-zone__services-title--highlight">supers</span>
+          Services
+        </h2>
+
+        <div class="container hero-zone__container">
+          <article
+            class="hero-zone__service-item hero-zone__service-item--demenagement"
+          >
+            <h3 class="hero-zone__service-title">Super Déménagement</h3>
+            <h4 class="hero-zone__service-description">
+              pour des déménagements sans effort et sans casse *!
+            </h4>
+            <span class="hero-zone__service-price">A partir de 233 €</span>
+            <p class="hero-zone__service-note">
+              * Nous ne pouvons malheureusement pas garantir que vos objets
+              fragiles ou votre chat Gribouille survivront à un combat épique
+              entre super-vilains lors du trajet.
+            </p>
+          </article>
+
+          <article
+            class="hero-zone__service-item hero-zone__service-item--repas"
+          >
+            <h3 class="hero-zone__service-title">Livraison de repas</h3>
+            <h4 class="hero-zone__service-description">
+              Pour des livraisons super-soniques*
+            </h4>
+            <span class="hero-zone__service-price">À partir de 12 €</span>
+            <p class="hero-zone__service-note">
+              * Pour éviter tout dommage à votre porte, merci de la laisser
+              ouverte, certains super-héros n'ont pas conscience de leur force.
+              Vous pouvez souscrire à notre assurance Porte en vrac pour 5 € de
+              plus.
+            </p>
+          </article>
+
+          <article
+            class="hero-zone__service-item hero-zone__service-item--bouchons"
+          >
+            <h3 class="hero-zone__service-title">Z'héro Bouchons</h3>
+            <h4 class="hero-zone__service-description">
+              Pour les clients pressés !*
+            </h4>
+            <span class="hero-zone__service-price">1,33 €/km</span>
+            <p class="hero-zone__service-note">
+              * Le mode de déplacement peut être différent en fonction de la
+              disponibilité des héros. Merci de préciser à la commande si vous
+              avez le mal des transports soniques.
+            </p>
+          </article>
+
+          <article
+            class="hero-zone__service-item hero-zone__service-item--soiree"
+          >
+            <h3 class="hero-zone__service-title">Sauvetage de soirée</h3>
+            <h4 class="hero-zone__service-description">
+              Pour les soirées booooring !
+            </h4>
+            <span class="hero-zone__service-price">À partir de 50 €/h</span>
+            <p class="hero-zone__service-note">
+              * Nous ne pouvons malheureusement pas garantir que votre
+              super-héros ne se fera pas la malle si la soirée n'est pas
+              sauvable.
+            </p>
+          </article>
+
+          <article
+            class="hero-zone__service-item hero-zone__service-item--zheros"
+          >
+            <h3 class="hero-zone__service-title">Moral à Z'héro</h3>
+            <h4 class="hero-zone__service-description">
+              Pour les jours gris et les cœurs lourds, des héros au moral
+              d'acier.*
+            </h4>
+            <span class="hero-zone__service-price">À partir de 100 €</span>
+            <p class="hero-zone__service-note">
+              * Il peut arriver que le moral de votre héros ne soit pas au beau
+              fixe et vous bassine avec sa défaite de la veille, dans ce cas,
+              nous vous remboursons 50 % de la prestation.
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Section Heros -->
+      <section class="hero-zone__services">
+        <h2 id="heros" class="hero-zone__services-title">
+          Nos
+          <span class="hero-zone__services-title--highlight">supers</span>
+          Héros
+        </h2>
+        <!-- <div
+          id="hero"
+          style="
+            width: 50px;
+            height: 50px;
+            background-color: red;
+            position: absolute;
+            top: 50px;
+            left: 50px;
+          "
+        >
+          hero
+        </div> -->
+
+        <div class="container hero-zone__container-superHeros">
+          <article
+            class="hero-zone__supers-heros hero-zone__supers-heros--catastrophic"
+          >
+            <div class="hero-zone__text">
+              <h3 class="hero-zone__supers-heros-title">Cat Astrophic</h3>
+
+              <p class="hero-zone__supers-heros-note">
+                Avec son super ronron, il saura vous réconforter dans n'importe
+                quelle situation.
+              </p>
+            </div>
+            <p class="hero-zone__supers-heros-detail">
+              Ne contrôle pas tout à fait sa patte droite, et peut être amené à
+              vous mettre une - plus ou moins petite - tape sur la tête
+            </p>
+          </article>
+
+          <article
+            class="hero-zone__supers-heros hero-zone__supers-heros--carotte"
+          >
+            <div class="hero-zone__text">
+              <h3 class="hero-zone__supers-heros-title">Carotte Woman</h3>
+
+              <p class="hero-zone__supers-heros-note">
+                Mis à part son apparence de carotte, on ne sait pas bien à quoi
+                elle est forte, mais on va trouver.
+              </p>
+            </div>
+            <p class="hero-zone__supers-heros-detail">
+              Attention, elle essaiera souvent de vous faire payer plus que le
+              prix convenu avec Heros League. N'acceptez pas.
+            </p>
+          </article>
+
+          <article
+            class="hero-zone__supers-heros hero-zone__supers-heros--ultraquenarde"
+          >
+            <div class="hero-zone__text">
+              <h3 class="hero-zone__supers-heros-title">Ultraquenarde</h3>
+
+              <p class="hero-zone__supers-heros-note">
+                Peut vous sortir de n'importe quel traquenard.
+              </p>
+            </div>
+            <p class="hero-zone__supers-heros-detail">
+              Vous sort du traquenard… Mais il arrive qu'elle vous entraîne dans
+              un autre.
+            </p>
+          </article>
+
+          <article
+            class="hero-zone__supers-heros hero-zone__supers-heros--poulpy"
+          >
+            <div class="hero-zone__text">
+              <h3 class="hero-zone__supers-heros-title">Poulpy</h3>
+
+              <p class="hero-zone__supers-heros-note">
+                Il a des tentacules gigantesques, super pratique pour les
+                déménagements.
+              </p>
+            </div>
+            <p class="hero-zone__supers-heros-detail">Un peu collant</p>
+          </article>
+
+          <article
+            class="hero-zone__supers-heros hero-zone__supers-heros--orang"
+          >
+            <div class="hero-zone__text">
+              <h3 class="hero-zone__supers-heros-title">Orang Wu-Tang Clan</h3>
+
+              <p class="hero-zone__supers-heros-note">
+                Un gros singe agile, multi-tâche, qui intervient tout en
+                rappant.
+              </p>
+            </div>
+            <p class="hero-zone__supers-heros-detail">
+              Peut être amené à vous demander de financer son prochain album, ne
+              pas accepter.
+            </p>
+          </article>
+
+          <article
+            class="hero-zone__supers-heros hero-zone__supers-heros--superime"
+          >
+            <div class="hero-zone__text">
+              <h3 class="hero-zone__supers-heros-title">Superimé</h3>
+
+              <p class="hero-zone__supers-heros-note">
+                Un feu super-héro qui ne veut pas partir à la retraite.
+              </p>
+            </div>
+            <p class="hero-zone__supers-heros-detail">
+              N'a plus de pouvoir mais refuse de l'admettre, peut être amené à
+              vous raconter des histoires de l'époque où il était encore super.
+            </p>
+          </article>
+        </div>
+
+        <button class="hero-zone__service-price" a href="#">
+          Tous nos héros
+        </button>
+      </section>
+
+      <!-- Section Temoignages -->
+      <section
+        class="container hero-zone__services hero-zone__services--temoignages"
+      >
+        <h2 id="temoignages" class="hero-zone__services-title">
+          Les <span>témoignages</span> de nos clients
+        </h2>
+        <p class="hero-zone__call-to-action">
+          Cliquez sur le nom de nos témoins pour en savoir plus
+        </p>
+        <div class="hero-zone__temoignages-container">
+          <article
+            class="hero-zone__temoignages-zone hero-zone__temoignages-zone--TombedeuO"
+          >
+            <img
+              class="hero-zone__picture hidden"
+              src="../ressources/images/testimony-1.png"
+              alt="client souriant regard vers le ciel"
+            />
+            <h3 class="hero-zone__temoignages-title">Tombédeu O.</h3>
+
+            <p class="hero-zone__temoignages-note hidden">
+              "Grâce à Heros League, j'ai pu déménager super rapidement.
+              Attention à l'odeur laissée par les tentacules ceci-dit. Merci
+              Poulpy !"
+            </p>
+          </article>
+
+          <article
+            class="hero-zone__temoignages-zone hero-zone__temoignages-zone--jellaN"
+          >
+            <img
+              class="hero-zone__picture hidden"
+              src="../ressources/images/testimony-2.png"
+              alt="cliente souriante casque audio sur les oreilles"
+            />
+            <h3 class="hero-zone__temoignages-title">Jella N.</h3>
+
+            <p class="hero-zone__temoignages-note hidden">
+              "Ultraquenarde m'a sauvé la vie ! J'allais tout perdre et sur ses
+              conseils j'ai investi dans les bitcoins, affaire à suivre !"
+            </p>
+          </article>
+
+          <article
+            class="hero-zone__temoignages-zone hero-zone__temoignages-zone--BobO"
+          >
+            <img
+              class="hero-zone__picture hidden"
+              src="../ressources/images/testimony-3.png"
+              alt="client souriant un chat roux dans les bras"
+            />
+            <h3 class="hero-zone__temoignages-title">Bob O.</h3>
+
+            <p class="hero-zone__temoignages-note hidden">
+              "Je ne remercierai jamais assez Carotte Woman d'avoir retrouvé mon
+              chat. Apparemment c'est normal si il est orange et plus noir, elle
+              l'aurait retrouvé dans un produit chimique spécial. Je la crois
+              sur parole !"
+            </p>
+          </article>
+
+          <article
+            class="hero-zone__temoignages-zone hero-zone__temoignages-zone--CoupehalaH"
+          >
+            <img
+              class="hero-zone__picture hidden"
+              src="../ressources/images/testimony-4.png"
+              alt="cliente heureuse accompagnée de Supervif"
+            />
+            <h3 class="hero-zone__temoignages-title">Coupéhala H.</h3>
+
+            <p class="hero-zone__temoignages-note hidden">
+              "Supervif a été super, il m'a sortie des bouchons et amenée au
+              travail en un temps record. Par contre j'aimerais bien retrouver
+              ma voiture maintenant."
+            </p>
+          </article>
+        </div>
+      </section>
+
+      <!-- Section formulaire -->
+      <section class="hero-zone__form">
+        <h2 id="sauvezMoi-form" class="hero-zone__services-title">
+          Sauvez-moi !
+        </h2>
+        <!--  il faut enlever les required pour que les messages fonctionnent -->
+        <form class="container hero-zone__form-sauvezMoi">
+          <div class="hero-zone__champ">
+            <label class="hero-zone__label" for="name">Nom</label>
+            <input class="hero-zone__input" type="text" id="name" />
+          </div>
+
+          <div class="hero-zone__champ">
+            <label class="hero-zone__label" for="emal">Email</label>
+            <input class="hero-zone__input" type="email" id="email" />
+          </div>
+
+          <div class="hero-zone__champ">
+            <label class="hero-zone__label" for="service">Service</label>
+            <select
+              class="hero-zone__input"
+              name="service"
+              id="service"
+              required
+            >
+              <option class="hero-zone__option">Super Déménagement</option>
+              <option class="hero-zone__option">Livraison de Repas</option>
+              <option class="hero-zone__option">Z'héro Bouchons</option>
+              <option class="hero-zone__option">Sauvetage de soirée</option>
+              <option class="hero-zone__option">Moral à Z'héro</option>
+            </select>
+          </div>
+
+          <div class="hero-zone__champ">
+            <label class="hero-zone__label" for="message">Message</label>
+            <textarea
+              class="hero-zone__input"
+              id="message"
+              rows="10"
+            ></textarea>
+          </div>
+
+          <button type="submit" class="btn-form hero-zone__service-price">
+            Envoyer
+          </button>
+        </form>
+      </section>
+    </main>
+
+    <footer class="container footer-hero">
+      <h1 class="footer-hero_title">Heros League</h1>
+
+      <nav class="footer-hero__menu">
+        <a class="footer-hero__menu-item" href="#services">Services</a>
+        <a class="footer-hero__menu-item" href="#heros">Nos héros</a>
+        <a class="footer-hero__menu-item" href="#temoignages">Témoignages</a>
+        <a class="footer-hero__menu-item" href="#sauvezMoi-form"
+          >Sauvez-moi !</a
+        >
+      </nav>
+
+      <p class="footer-hero_copyright">
+        © 2024 Heros League - Tous droits réservés
+      </p>
+    </footer>
+    <!-- div pour recevoir le message -->
+    <div id="message-zone"></div>
+  </body>
+</html>

@@ -1,0 +1,839 @@
+/* 
+html font-size: 62.5% /* taille par défaut du navigateur = 16px donc 16px*62.5% = 10px pour 1 rem pour simplifier les calculs
+  ; 
+Height en vh pour s'adapter à la hauteur de l'écran
+ */
+
+/* ====== Styles de base ====== */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth; /* ????*/
+  font-size: 62.5%; 
+}
+
+body {
+  font-family: "Satoshi", sans-serif;
+  background: #080808;
+  padding: 2rem;
+  margin: 0 auto;
+  color: white;
+
+  font-size: 1.6rem; /* Taille de base : 16px */
+  text-align: center;
+}
+
+/* Classe de base pour les conteneurs principaux */
+.container {
+  width: 100%; /* Prend toute la largeur de l'écran */
+  margin: 0 auto; /* Centrage horizontal */
+  padding: 0 1rem; /* Ajoute un padding pour éviter que le contenu touche les bords */
+  box-sizing: border-box; /* Assure que padding/margin ne déborde pas */
+  max-width: 1200px; /* Limite pour les grands écrans */
+}
+
+/* ====== HEADER ====== */
+.header-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.header-hero__container{
+  display : flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+.header-hero__container-header {
+  background: url("../ressources/images/hero-banner.png");
+  /* pour avoir la largeur d'image : */
+  background-position: 50% 51%;
+  background-repeat: no-repeat;
+  /* Pour le focus */
+  background-size: 387%;
+  height: 100vh;
+  /* Pour que le fond ne bouge pas */
+  background-attachment: scroll; /* Fond fixe */
+  border-radius: 1rem;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap :2rem;
+  margin: auto;
+
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7); 
+  position : relative;
+
+}
+
+.header-hero__title {
+  font-size: 6rem;
+}
+
+.header-hero__link {
+  font-size: 4rem; /* 14px */
+  font-weight: bold;
+  text-decoration: none;
+  color: white;
+}
+
+
+.header-hero {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+/* styliser bouton menu*/
+.header-hero__button {
+  background-color:  #948DE7;;
+  color: white;
+  border: 0;
+  padding: 0.6rem 1rem;
+  border-radius: 1.5rem;
+  text-transform: uppercase;
+  margin: 0 0.5rem;
+}
+
+.header-hero__button::before {
+  content: "\2630";
+  margin-right: 0.25rem;
+  display: inline-block;
+  min-width: 1em;
+}
+
+/* styliser l'encadré et les items*/
+.header-hero__menu {
+  
+  flex-direction: column;
+
+  position: absolute;
+  left: 0;
+  top: 10.5%;
+  width: 150px;
+  border: 3px solid white;
+  background-color: #080808; */
+  padding: 1rem 0;
+  display: none;
+  animation: slide 0.3s 0s 1 ease;
+  border-bottom-right-radius: 10px;
+  z-index: 1; 
+}
+
+.header-hero__menu-item {
+  color: white;
+  text-decoration: none;
+  padding : 1rem 2rem;
+  margin : 4px 0
+}
+
+.header-hero__menu :hover {
+  color : #948DE7;
+}
+
+/* JS au clic pour faire apparaitre menu et modifier l'icone */
+.header-hero__menu.banner--open{
+  display: flex;
+}
+
+ .header-hero__button::before {
+  content: "\2630";
+  margin-right: 0.25rem;
+  display: inline-block;
+  min-width: 1em;
+}
+.header-hero__button.banner--open::before {
+  content: "\00D7";
+}
+
+
+
+
+
+
+
+
+
+
+
+
+/* ====== ZONE SUPERS SERVICES ====== */
+.hero-zone__services-title {
+  font-size: 3rem;
+  padding: 3rem 0 2rem 0;
+  font-weight: bold;
+}
+
+.hero-zone__services-title--highlight {
+  color: #a29bfe;
+}
+
+.hero-zone__container {
+  display: flex;
+  flex-direction: column;
+  font-weight: bold;
+  gap: 2rem;
+  width: 100%;
+  height: auto;
+}
+
+.hero-zone__service-item {
+  border: 1px solid #6d69ac;
+  border-radius: 1rem;
+  padding: 1.5rem; 
+  margin-bottom: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  transition: transform 0.3s ease-in-out; /*transition pour agrandir*/
+}
+.hero-zone__service-item:hover {
+  transform: scale(1.05);  /*transition pour agrandir*/
+}
+
+
+.hero-zone__service-title {
+  color: #a29bfe;
+  font-size: 2.6rem;
+}
+
+.hero-zone__service-description {
+  text-transform: uppercase;
+  line-height: 1.5;
+  font-size: 1.5rem;
+
+}
+
+.hero-zone__service-note {
+  font-size: 1.3rem; /* 0.6rem -> 1rem pour la lisibilité */
+  line-height: 1.2;
+  margin-top: 2rem;
+  font-weight: normal;
+}
+
+/* ====== ZONE SUPER HEROS =====*/
+.hero-zone__container-superHeros {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.hero-zone__supers-heros {
+  max-width: 100%;
+  height: 40vh;
+  position: relative;
+  border-radius: 2rem;
+}
+
+.hero-zone__supers-heros:hover .hero-zone__supers-heros-detail {
+ opacity :1;
+ display : block;
+  }
+
+.hero-zone__supers-heros-detail {
+  position : absolute;
+  top: 0vh;
+  bottom: 35vh;
+  margin : 0vh;
+  left:0vh;
+  right:0vh;
+  
+  background-color:rgba(146, 147, 212, 0.5);
+  opacity :0;  
+ display :none; 
+  /* transition sur opacity pdt 1s et visibility pdt 5sec*/
+  transition: opacity 1s ease-in-out, visibility 5s 0.3s;  
+}
+
+.hero-zone__text {
+  background-color: rgba(54, 53, 53, 0.5);
+  text-align: center;
+  position: absolute;
+  /* position :relative; */
+  top: 20vh;
+  width: 100%;
+  padding: 3.3rem 2rem 1rem 2rem;
+  line-height: 1.5;
+}
+
+.hero-zone__supers-heros-title {
+  font-weight: bold;
+  font-size: 3rem;
+}
+
+.hero-zone__supers-heros-note {
+  font-size: 1.2em;
+  color: rgba(255, 255, 255, 0.6); /* Plus de transparence pour la note */
+  /* top :10vh;
+  bottom :10vh;
+  position:absolute; */
+}
+
+
+
+.hero-zone__supers-heros--catastrophic {
+  background: url("../ressources/images/catastrophic.png") center/cover
+    no-repeat;
+}
+
+.hero-zone__supers-heros--carotte {
+  background: url("../ressources/images/carotte-woman.png") center/cover
+    no-repeat;
+}
+
+.hero-zone__supers-heros--ultraquenarde {
+  background: url("../ressources/images/ultraquenarde.png") center/cover
+    no-repeat;
+}
+
+.hero-zone__supers-heros--poulpy {
+  background: url("../ressources/images/poulpy.png") center/cover no-repeat;
+}
+
+.hero-zone__supers-heros--orang {
+  background: url("../ressources/images/oran-wu-tang-clan.png") center/cover
+    no-repeat;
+}
+
+.hero-zone__supers-heros--superime {
+  background: url("../ressources/images/superime.png") center/cover no-repeat;
+}
+
+.hero-zone__service-price {
+  background-color: #a29bfe;
+  /* margin: auto; */
+  padding: 1em 2.5em;
+  border-radius: 2rem;
+  color: white;
+  font-size: 1.4rem;
+  margin-top: 3rem;
+  text-transform: uppercase;
+  font-weight: bold;
+  text-shadow: 4px 2px 3px rgba(0, 0, 0, 0.7); /* Ombre floue */
+
+}
+
+.hero-zone__service-price:hover {
+  background-color: #726DB2;
+}
+
+/* ====== ZONE TEMOIGNAGES =====*/
+
+#temoignages {
+  font-size: 3rem;
+  padding: 6rem 0 0 0;
+}
+
+#temoignages span {
+  text-transform: capitalize;
+}
+
+.hero-zone__temoignages-container {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.hero-zone__services--temoignages {
+  display: flex;
+  flex-direction: column;
+  gap: 4rem;
+}
+
+.hero-zone__temoignages-zone {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  line-height: 1.6;
+  background-color: #8a84d8;
+  border-radius: 4rem;
+  transition: box-shadow 0.3s ease-in-out; /* Ajout d'une ombre au survol */
+}
+
+.hero-zone__temoignages-zone:hover {
+  box-shadow: 0 0 15px rgba(138, 132, 216, 0.7);
+}
+
+.hero-zone__picture {
+  border: 1.2rem solid #a29bfe;
+  border-radius: 0 0 50% 50%; /* Coins inférieurs arrondis */
+  /* max-width: 100%; */
+  width: 100%;
+  height: auto;
+  max-width: 709px; 
+}
+
+.hero-zone__temoignages-title {
+  font-weight: bold;
+  font-size: 1.3em;
+}
+
+.hero-zone__temoignages-note {
+  padding: 0 5rem 2rem;
+  font-size: 2rem;
+  font-style: italic;
+}
+
+/* pour le JS on cache images et temoignages on incite à cliquer pour en savoir plus */
+
+.hidden {
+  display: none; /* Cache complètement l'élément */
+}
+
+.hero-zone__call-to-action {
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-align: center;
+  color: #fff;
+  cursor: pointer;
+  padding: 1rem;
+}
+.hero-zone__call-to-action:hover {
+  color: #ffcb77; /* Couleur différente au survol */
+}
+
+/* ====== ZONE FORMULAIRE =====*/
+
+#sauvezMoi-form {
+  padding: 5rem 0 4rem 0;
+}
+
+.hero-zone__form-sauvezMoi {
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+}
+
+.hero-zone__champ {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 2rem;
+}
+
+.hero-zone__label {
+  font-weight: bold;
+  font-size: 1.2em;
+}
+
+.hero-zone__input {
+  background-color: #4d4d4d;
+  border-radius: 2rem;
+  padding: 2rem;
+}
+
+/* Ajout d'une mise en surbrillance des champs de formulaire lors de leur sélection pour améliorer l'expérience utilisateur */
+.hero-zone__input:focus {
+  border: 3px solid #856cff;
+  outline : none;
+}
+
+.hero-zone__option {
+  color: white;
+  font-size: 1.2em;
+}
+
+.btn-form {
+  margin: auto;
+}
+
+.btn-form:hover {
+  background-color: #726DB2;
+  transition: border-color 1s ease, background-color 1s ease;
+
+}
+
+
+/* ====== FOOTER =====*/
+
+.footer-hero {
+  background-color: #856cff;
+  margin-top: 4rem;
+  border-radius: 30% 30% 0 0;
+  padding: 1rem;
+}
+
+.footer-hero__menu {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  margin: 2rem 0 3rem 0;
+}
+
+.footer-hero__menu :hover {
+  color: #dedbff; /* Ajout d'un changement de couleur au survol des liens pour le rendre plus interactif */
+  font-weight: bold;
+}
+
+.footer-hero_title {
+  font-size: 3rem;
+  font-weight: bold;
+}
+
+.footer-hero__menu-item {
+  text-decoration: none;
+  color: white;
+  font-size: 0.9em;
+  line-height: 2.5;
+}
+
+.footer-hero_copyright {
+  margin: 3em 0 2em 0;
+}
+
+/* ------------------------------ */
+/* MEDIA QUERIES */
+/* ------------------------------ */
+
+@media (min-width: 768px) {
+  /* .container {
+    max-width: 500px;
+  } */
+
+  body {
+    /*background-color: pink; */
+  }
+
+  .header-hero__container{
+    display : flex;
+    flex-direction: column;
+  }
+
+.header-hero__button{
+  display : none;
+}
+
+
+  .header-hero__menu {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 2rem;
+    position : static;
+    width: auto; 
+    border: none; 
+    background-color: transparent;
+  }
+
+  .header-hero__menu-item {
+    margin: 1rem;
+  }
+
+  .header-hero__link {
+    font-size: 2rem;
+  }
+
+  .header-hero__container-header {
+    /* Pour le focus */
+    background-size: 169%;
+    height: 100vh;
+  }
+
+  .header-hero__title {
+    font-size: 5rem; 
+    font-weight: bold; /* Accentue la hiérarchie visuelle */
+  }
+
+  .header-hero__description {
+    font-size: 2rem; 
+    margin-top: 3rem; /* Ajoute un espace avant les autres éléments */
+    
+  }
+
+  /* ----- services ----- 768 ----- */
+  .hero-zone__container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "zone1 zone2"
+      "zone3 zone4"
+      "zone5 zone5";
+
+    gap: 10px;
+  }
+  .hero-zone__service-item--demenagement {
+    grid-area: zone1;
+  }
+  .hero-zone__service-item--repas {
+    grid-area: zone2;
+  }
+  .hero-zone__service-item--bouchons {
+    grid-area: zone3;
+  }
+  .hero-zone__service-item--soirée {
+    grid-area: zone4;
+  }
+  .hero-zone__service-item--zheros {
+    grid-area: zone5;
+  }
+
+  /* ----- heros ----- 768 ----- */
+
+  .hero-zone__container-superHeros {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+    border-radius: 10px;
+  }
+
+  .hero-zone__supers-heros {
+    border-radius: 2rem;
+    height: 20vh;
+    display : flex;
+    flex-direction:column-reverse;
+  }
+
+  .hero-zone__supers-heros-title {
+    font-size: 2rem;
+  }
+
+  .hero-zone__supers-heros-note {
+    font-size: 0.5em;
+  }
+
+  .hero-zone__text{
+    top :9vh;
+        ;}
+    
+    .hero-zone__supers-heros-detail {
+      margin : 0rem;
+      font-size: 0.5em;
+      bottom : 17vh;
+    }
+
+  /* ----- temoignages ----- 768 ----- */
+  .hero-zone__temoignages-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 2rem;
+    width: 100%; /* Largeur adaptative du conteneur */
+   margin : auto;
+     }
+
+  .hero-zone__picture {
+    object-fit: cover; /* Remplit la zone sans déformation */
+    border-radius: 50%; 
+    height: min(50vw, 409px); 
+}
+
+.hero-zone__temoignages-zone {
+  justify-content: flex-start;
+  border-radius: 50% 50% 10% 10% ;
+  width :100%
+   }
+
+  .hero-zone__temoignages-note {
+    font-size: 1.3rem;
+    padding: 0 1rem 1rem 2rem;
+     }
+
+  /* ----- footer ----- 768 ----- */
+  .footer-hero__menu {
+    flex-direction: row;
+    justify-content: center;
+  }
+
+}
+/* ---------- MQ 1200px ---------- */
+@media only screen and (min-width: 1024px) {
+  .container {
+    max-width: 3000px;
+  }
+
+  body {
+    /*background-color: rgb(192, 255, 213); */
+  }
+
+  .header-hero__container {
+    display: flex;
+    justify-content: space-between;
+    padding: 1rem 0 3.5rem 0;
+  }
+
+  .header-hero__menu {
+    padding: 0;
+  }
+  .header-hero__container-header {
+    background-size: contain;
+    background-position: center;
+    height: 89vh; */
+
+    background-attachment: scroll;
+    background-size: 100%;
+  
+  }
+
+  .header-hero__title {
+    font-size: 3rem;
+    font-weight: bold;
+    padding: 5rem;
+  }
+
+  .hero-header__description {
+    font-size: 1.3rem;
+  }
+
+  /* ----- services ----- 1024 ----- */
+  .hero-zone__container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-template-areas:
+      "zone1 zone2 zone2"
+      "zone1 zone3 zone4"
+      "zone5 zone5 zone4";
+
+    gap: 10px;
+  }
+  .hero-zone__service-item--demenagement {
+    grid-area: zone1;
+  }
+  .hero-zone__service-item--repas {
+    grid-area: zone2;
+  }
+  .hero-zone__service-item--bouchons {
+    grid-area: zone3;
+  }
+  .hero-zone__service-item--soirée {
+    grid-area: zone4;
+  }
+  .hero-zone__service-item--zheros {
+    grid-area: zone5;
+  }
+
+  /* ----- heros ----- 1024 ----- */
+
+  .hero-zone__container-superHeros {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: 2rem;
+    
+  }
+
+    .hero-zone__supers-heros {
+    height: 32vh;
+    position: relative;
+    border-radius: 2rem;
+    background-size : cover;
+/*  unité vw => pareil, mais pour la largeur (width) 
+    utile pour remplir tout l'espace disponible*/
+
+    /* display : flex;
+    flex-direction: column-reverse;
+*/
+     } 
+
+     .hero-zone__text{
+      top :16vh;
+          ;}
+      
+     .hero-zone__supers-heros-note {
+      font-size: 0.8em;
+      
+       } 
+        
+      .hero-zone__supers-heros-detail {
+          font-size: 1em;
+          top : 0;
+          bottom : 24vh;
+        
+        }
+
+  /* témoignages */
+  .hero-zone__temoignages-container {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 40px;
+  }
+
+  .hero-zone__temoignages-container {
+    width: 100%; /* Largeur adaptative du conteneur */
+     }
+
+  .hero-zone__picture {
+    object-fit: cover; /* Remplit la zone sans déformation */
+   /* border-radius: 50%;     */
+    height: auto; 
+    aspect-ratio: 1 / 1; /* Maintient un rapport largeur/hauteur fixe (cercle parfait) */
+  }
+
+ .hero-zone__temoignages-zone {
+    border-radius: 21rem 21rem 4rem 4rem;
+    justify-content: flex-start;
+  }
+
+  .hero-zone__temoignages-note{
+    font-size: 1.3rem;
+    /* Attenuer la couleur blanche */
+    color: rgba(255, 255, 255, 0.6);
+  }
+
+  .hero-zone__form-sauvezMoi {
+    max-width : 500px;
+  }
+
+}
+
+
+/*  interractivité  */
+
+.selected {
+  border: 3px solid #a29bfe;
+  box-shadow: 0 0 20px #a29bfe;
+  transition: 0.3s;
+}
+
+
+
+/* styles pour le message*/
+
+#message-zone {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: .5rem;
+  position: fixed;
+  top: 115.5rem;
+  right: 37.5rem;
+  z-index: 10000;
+  max-width: 30vw;
+}
+
+.message {
+  padding: 1rem;
+  border-radius: 3px;
+  border-bottom: 3px solid;
+  color: #fff;
+  cursor: pointer;
+}
+
+.message--success {
+  background-color: #24b224;
+  border-color: #508050;
+}
+.message--error {
+  background-color: #CA5B53;
+  border-color: #853b36;
+}
+.message--warning {
+  background-color: #F8A720;
+  border-color: #a87215;
+}
+.message--info {
+  background-color: #07baf0;
+  border-color: #2c5a68;
+}
+
+
+
+ /* pour le JS  */
