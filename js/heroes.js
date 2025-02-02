@@ -1,7 +1,7 @@
+// console.log(message);
+// console.log(typeof message.show); // Devrait afficher "function"
+// message.show("Test du message", "info");
 import { message } from "./message.js";
-console.log(message);
-console.log(typeof message.show); // Devrait afficher "function"
-message.show("Test du message", "info");
 
 export const heroes = {
   init: function () {
@@ -16,8 +16,7 @@ export const heroes = {
   },
 
   //  appel des autres fonctions
-
-  // Afficher le menu au clic
+  // Afficher le menu au clic pour l'affichage mobile
   displayMenu: function (event) {
     console.log("Toggle menu");
     const headerEl = document.querySelector(".header-hero__menu");
@@ -27,14 +26,16 @@ export const heroes = {
     buttonEl.classList.toggle("banner--open");
   },
 
+  // soumettre un formulaire
   handleSubmit: function (event) {
     event.preventDefault();
     const form = event.currentTarget;
     console.log("Formulaire soumis :", form);
     const name = form.querySelector("#name").value.trim();
+    const firstname = form.querySelector("#firstname").value.trim();
     const email = form.querySelector("#email").value.trim();
     const service = form.querySelector("#service").value.trim();
-    // mis un $ devant message car sinon confondait avec le module message à importer
+    // $ devant message pour ne pas confondre avec le module message à importer
     const $message = form.querySelector("#message").value.trim();
 
     console.log("Nom :", name);
@@ -42,7 +43,7 @@ export const heroes = {
     console.log("Service :", service);
     console.log("Message :", $message);
 
-    if (!name || !email || !service || !$message) {
+    if (!name || !email || !service || !firstname) {
       console.log("pas ok");
       // alert("pas ok");
       message.show("Veuillez remplir tous les champs obligatoires", "info");
@@ -52,7 +53,7 @@ export const heroes = {
     // alert(" ok");
     // lysevie@gmail.com
     message.show(
-      `Merci, ${name} !\nNous avons bien reçu votre demande pour le service ${service}`,
+      `Merci, ${firstname} !\nNous avons bien reçu votre demande pour le service ${service}`,
       "success"
     );
     event.currentTarget.reset();
@@ -66,7 +67,9 @@ export const heroes = {
     $testimonials.forEach((testimonial) => {
       testimonial.addEventListener("click", (event) => {
         console.log("clic sur un temoignage");
-        $testimonials.forEach((t) => t.classList.remove("selected"));
+        $testimonials.forEach((testimonial) =>
+          testimonial.classList.remove("selected")
+        );
         event.currentTarget.classList.add("selected");
 
         // Récupère l'image et les textes cachés
@@ -85,24 +88,3 @@ export const heroes = {
     });
   },
 };
-/**
-  Fonction pour faire apparaitre une info : "en savoir plus sur votre héros préféré"
-  appel de la fonction dans init function :
-  heroes.handleHeroClick();
-  
-  
-  création de la fonction :
-  handleHeroClick: function (event) {
-    const $heroes = document.querySelectorAll(".hero-zone__supers-heros");
-    console.log($heroes);
-    $heroes.forEach((hero) => {
-      hero.addEventListener("click", (event) => {
-        console.log("clic sur un heros");
-        $heroes.forEach((hero) => hero.classList.remove("selected"));
-        event.currentTarget.classList.add("selected");
-      });
-    });
-  }, 
-
-
-   * / */

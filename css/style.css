@@ -557,10 +557,9 @@ body {
       "zone1 zone2"
       "zone3 zone4"
       "zone5 zone5";
-
     gap: 10px;
   }
-  .hero-zone__service-item--demenagement {
+  /* .hero-zone__service-item--demenagement {
     grid-area: zone1;
   }
   .hero-zone__service-item--repas {
@@ -574,7 +573,7 @@ body {
   }
   .hero-zone__service-item--zheros {
     grid-area: zone5;
-  }
+  } */
 
   /* ----- heros ----- 768 ----- */
 
@@ -691,10 +690,9 @@ body {
       "zone1 zone2 zone2"
       "zone1 zone3 zone4"
       "zone5 zone5 zone4";
-
     gap: 10px;
   }
-  .hero-zone__service-item--demenagement {
+  /* .hero-zone__service-item--demenagement {
     grid-area: zone1;
   }
   .hero-zone__service-item--repas {
@@ -708,7 +706,7 @@ body {
   }
   .hero-zone__service-item--zheros {
     grid-area: zone5;
-  }
+  } */
 
   /* ----- heros ----- 1024 ----- */
 
@@ -797,12 +795,19 @@ body {
 
 /* styles pour le message*/
 
+/* Assurer que le formulaire a un conteneur flex */
+.hero-zone__submit-container {
+  display: flex;
+  align-items: center;
+  gap: 10px; 
+}
+
 #message-zone {
   display: flex;
   flex-direction: column;
   align-items: flex-end;
   gap: .5rem;
-  position: fixed;
+  position: static;
   top: 115.5rem;
   right: 37.5rem;
   z-index: 10000;
@@ -813,13 +818,13 @@ body {
   padding: 1rem;
   border-radius: 3px;
   border-bottom: 3px solid;
-  color: #fff;
+  color: #0f0f0f;
   cursor: pointer;
 }
 
 .message--success {
-  background-color: #24b224;
-  border-color: #508050;
+  background-color: #b5f1b5;
+  border-color: #0f0f0f;
 }
 .message--error {
   background-color: #CA5B53;

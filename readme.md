@@ -11,14 +11,14 @@ Heros League est un site web fictif conçu pour promouvoir les services et les s
 ### Fonctionnalités principales :
 
 - Une page d'accueil avec un menu de navigation.
-
 - Une section présentant des services variés, tels que le « Super Déménagement » et « Livraison de repas ».
-
 - Une galerie de super-héros avec des descriptions amusantes.
-
 - Une section de témoignages clients.
-
 - Un formulaire permettant aux utilisateurs de demander de l'aide.
+- En JavaScript :
+  - Affichage du menu en mode mobile.
+  - Soumission du formulaire avec un message personnalisé.
+  - Affichage des témoignages au clic.
 
 ## Objectifs du projet
 
@@ -26,14 +26,15 @@ Heros League est un site web fictif conçu pour promouvoir les services et les s
 - Pratiquer les concepts de responsive design avec des media queries. Utiliser le mobile first.
 - Mettre en pratique l'utilisation des grilles CSS
 - Comprendre l’organisation d’un projet web.
+- Manipuler le DOM avec javascript
+- Structurer le code JavaScript en modules.
 
 ## Technologies utilisées
 
 - HTML5 : pour structurer la page.
-
 - CSS3 : pour styliser les différents éléments et rendre le site responsive.
-
 - Google Fonts : pour la typographie (Satoshi).
+- JavaScript : interactions utilisateur et dynamisation du site.
 
 ## Installation
 
