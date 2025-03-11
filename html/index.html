@@ -5,12 +5,16 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="stylesheet" href="../css/reset.css" />
-  <link rel="stylesheet" href="../css/style.css" />
-  <link rel="shortcut icon" href="data:image" type="image/x-icon" />
-  <title>Heros league</title>
+  <link rel="stylesheet" href="../css/style.css" ">
+  <link rel=" shortcut icon" href="/favicon.ico" type="image/x-icon" />
+  <title>Heros League - Des Héros Pour Vous Sauver au Quotidien</title>
+  <meta name="description"
+    content="Heros League vous propose des services uniques grâce à ses super-héros : déménagement, livraison, transport rapide et bien plus encore !" />
   <link rel="preconnect" href="https://fonts.googleapis.com" />
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
   <link href="https://api.fontshare.com/v2/css?f[]=satoshi@400&display=swap" rel="stylesheet" />
+
+  <link rel="preload" as="image" href="../ressources/images/hero-banner.webp" type="image/webp">
 
   <script defer src="../js/app.js" type="module"></script>
 </head>
@@ -21,7 +25,7 @@
       <button id="menu-toggler" class="header-hero__button" href="">
         Menu
       </button>
-      <a class="header-hero__link" href="">Heros League</a>
+      <a class="header-hero__link" href="index.html" title="Retour à l'accueil de Heros League">Heros League</a>
 
       <!-- Ajout du rôle navigation pour l'accessibilité -->
       <nav class="header-hero__menu" role="navigation">
@@ -242,8 +246,8 @@
       </p>
       <div class="hero-zone__temoignages-container">
         <article class="hero-zone__temoignages-zone hero-zone__temoignages-zone--TombedeuO">
-          <img class="hero-zone__picture hidden" src="../ressources/images/testimony-1.png"
-            alt="client souriant regard vers le ciel" />
+          <img class="hero-zone__picture hidden" src="../ressources/images/testimony-1.png" loading="lazy"
+            alt="Un client satisfait de Heros League, regardant le ciel avec un sourire." />
           <h3 class="hero-zone__temoignages-title">Tombédeu O.</h3>
 
           <p class="hero-zone__temoignages-note hidden">
@@ -254,8 +258,8 @@
         </article>
 
         <article class="hero-zone__temoignages-zone hero-zone__temoignages-zone--jellaN">
-          <img class="hero-zone__picture hidden" src="../ressources/images/testimony-2.png"
-            alt="cliente souriante casque audio sur les oreilles" />
+          <img class="hero-zone__picture hidden" src="../ressources/images/testimony-2.png" loading="lazy"
+            alt="une cliente souriante casque audio sur les oreilles" />
           <h3 class="hero-zone__temoignages-title">Jella N.</h3>
 
           <p class="hero-zone__temoignages-note hidden">
@@ -265,8 +269,8 @@
         </article>
 
         <article class="hero-zone__temoignages-zone hero-zone__temoignages-zone--BobO">
-          <img class="hero-zone__picture hidden" src="../ressources/images/testimony-3.png"
-            alt="client souriant un chat roux dans les bras" />
+          <img class="hero-zone__picture hidden" src="../ressources/images/testimony-3.png" loading="lazy"
+            alt="un client souriant un chat roux dans les bras" />
           <h3 class="hero-zone__temoignages-title">Bob O.</h3>
 
           <p class="hero-zone__temoignages-note hidden">
@@ -278,8 +282,8 @@
         </article>
 
         <article class="hero-zone__temoignages-zone hero-zone__temoignages-zone--CoupehalaH">
-          <img class="hero-zone__picture hidden" src="../ressources/images/testimony-4.png"
-            alt="cliente heureuse accompagnée de Supervif" />
+          <img class="hero-zone__picture hidden" src="../ressources/images/testimony-4.png" loading="lazy"
+            alt="une cliente souriante accompagnée de Supervif" />
           <h3 class="hero-zone__temoignages-title">Coupéhala H.</h3>
 
           <p class="hero-zone__temoignages-note hidden">
@@ -299,8 +303,9 @@
       <!--  il faut enlever les required pour que les messages fonctionnent -->
       <form class="container hero-zone__form-sauvezMoi">
         <div class="hero-zone__champ">
-          <label class="hero-zone__label" for="name">Nom</label>
-          <input class="hero-zone__input" type="text" id="name" />
+          <label class="hero-zone__label" for="name">Nom <span aria-hidden="true">*</span></label>
+          <input class="hero-zone__input" type="text" id="name" name="name" required autocomplete="name"
+            placeholder="Votre nom" />
         </div>
 
         <div class="hero-zone__champ">
@@ -309,13 +314,15 @@
         </div>
 
         <div class="hero-zone__champ">
-          <label class="hero-zone__label" for="emal">Email</label>
-          <input class="hero-zone__input" type="email" id="email" />
+          <label class="hero-zone__label" for="email">Email <span aria-hidden="true">*</span></label>
+          <input class="hero-zone__input" type="email" id="email" name="email" required autocomplete="email"
+            pattern="[^@]+@[^@]+\.[a-zA-Z]{2,6}" />
         </div>
 
         <div class="hero-zone__champ">
-          <label class="hero-zone__label" for="service">Service</label>
+          <label class="hero-zone__label" for="service">Service <span aria-hidden="true">*</span> </label>
           <select class="hero-zone__input" name="service" id="service" required>
+            <option value="" disabled selected>Choisissez un service</option>
             <option class="hero-zone__option">Super Déménagement</option>
             <option class="hero-zone__option">Livraison de Repas</option>
             <option class="hero-zone__option">Z'héro Bouchons</option>
@@ -326,7 +333,8 @@
 
         <div class="hero-zone__champ">
           <label class="hero-zone__label" for="message">Message</label>
-          <textarea class="hero-zone__input" id="message" rows="10"></textarea>
+          <textarea class="hero-zone__input" id="message" name="message" rows="10"
+            placeholder="Expliquez votre situation..."></textarea>
         </div>
 
         <div class="hero-zone__submit-container">

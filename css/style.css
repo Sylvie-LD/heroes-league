@@ -5,6 +5,9 @@ Height en vh pour s'adapter à la hauteur de l'écran
  */
 
 /* ====== Styles de base ====== */
+
+
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -50,7 +53,9 @@ body {
 }
 
 .header-hero__container-header {
-  background: url("../ressources/images/hero-banner.png");
+
+  
+  background: url("../ressources/images/hero-banner.webp");
   /* pour avoir la largeur d'image : */
   background-position: 50% 51%;
   background-repeat: no-repeat;
@@ -93,8 +98,9 @@ body {
 
 /* styliser bouton menu*/
 .header-hero__button {
-  background-color:  #948DE7;;
+  background-color:  #6A60C4;;
   color: white;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
   border: 0;
   padding: 0.6rem 1rem;
   border-radius: 1.5rem;
@@ -307,16 +313,18 @@ body {
 }
 
 .hero-zone__service-price {
-  background-color: #a29bfe;
+  background-color: #5A4FCF;
   /* margin: auto; */
   padding: 1em 2.5em;
   border-radius: 2rem;
-  color: white;
+  color: #FFFFFF; /* Gris foncé */
   font-size: 1.4rem;
   margin-top: 3rem;
   text-transform: uppercase;
   font-weight: bold;
-  text-shadow: 4px 2px 3px rgba(0, 0, 0, 0.7); /* Ombre floue */
+  text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+
+  
 
 }
 
@@ -428,6 +436,9 @@ body {
   background-color: #4d4d4d;
   border-radius: 2rem;
   padding: 2rem;
+  color: white;
+  border: 2px solid white; /* Bordure pour mieux définir l’élément */
+  box-shadow: 0px 0px 5px rgba(255, 255, 255, 0.5); /* Ajout d’une légère lueur */
 }
 
 /* Ajout d'une mise en surbrillance des champs de formulaire lors de leur sélection pour améliorer l'expérience utilisateur */
@@ -455,7 +466,7 @@ body {
 /* ====== FOOTER =====*/
 
 .footer-hero {
-  background-color: #856cff;
+  background-color: #726DB2;
   margin-top: 4rem;
   border-radius: 30% 30% 0 0;
   padding: 1rem;
@@ -483,6 +494,8 @@ body {
   color: white;
   font-size: 0.9em;
   line-height: 2.5;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.7); /* Ombre noire pour améliorer la lisibilité */
+
 }
 
 .footer-hero_copyright {
